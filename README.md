@@ -17,6 +17,7 @@ Project Playwright educational untuk belajar automation testing dari dasar sampa
 - [Test Scenarios](#test-scenarios)
 - [Page Object Model](#page-object-model)
 - [Reports dan Screenshots](#reports-dan-screenshots)
+- [CI/CD (GitHub Actions)](#cicd-github-actions)
 - [Dokumentasi Tambahan](#dokumentasi-tambahan)
 - [Tips dan Best Practices](#tips-dan-best-practices)
 - [Troubleshooting](#troubleshooting)
@@ -238,6 +239,8 @@ testProject/
 ├── playwright-report/              # 📈 HTML Report (auto-generated)
 │   └── index.html                  # Interactive HTML report
 │
+├── .github/workflows/              # 🔄 CI/CD (GitHub Actions, manual trigger)
+│   └── playwright.yml
 ├── playwright.config.js            # ⚙️ Playwright Configuration
 ├── package.json                    # 📦 NPM Dependencies
 └── README.md                       # 📖 This file
@@ -447,6 +450,32 @@ Konfigurasi di `playwright.config.js`:
 ```javascript
 video: 'retain-on-failure'  // Save video hanya ketika fail
 ```
+
+---
+
+## CI/CD (GitHub Actions)
+
+Project ini sudah dilengkapi dengan **GitHub Actions workflow** untuk menjalankan tests di cloud.
+
+**Mode:** Manual trigger only (tidak otomatis saat push/PR).
+
+### Cara Menjalankan CI:
+1. Buka repository di GitHub
+2. Klik tab **Actions**
+3. Pilih workflow **Playwright Tests**
+4. Klik tombol **Run workflow**
+5. Pilih branch, lalu klik **Run workflow**
+
+### Yang Dilakukan CI:
+- Setup Node.js dan install dependencies
+- Install Playwright browsers (Chromium, Firefox, WebKit)
+- Jalankan semua tests (`npx playwright test`)
+- Upload HTML report sebagai artifact (disimpan 30 hari)
+
+### Download Report dari CI:
+Setelah workflow selesai, klik run yang sudah complete → scroll ke bawah → download artifact **playwright-report**.
+
+File konfigurasi: `.github/workflows/playwright.yml`
 
 ---
 
