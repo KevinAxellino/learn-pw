@@ -80,9 +80,7 @@ test.describe('Shopping Cart Functionality', () => {
     const itemPrice = await cartPage.getItemPrice(productToAdd);
     expect(itemPrice).toBe(29.99); // Backpack price
 
-    // Take screenshot
-    await page.screenshot({ path: 'test-results/cart-single-item.png', fullPage: true });
-  });
+});
 
   /**
    * Test Case 2: Add Multiple Products to Cart
@@ -136,9 +134,7 @@ test.describe('Shopping Cart Functionality', () => {
     const expectedTotal = 29.99 + 9.99 + 15.99; // = 55.97
     expect(totalPrice).toBe(expectedTotal);
 
-    // Take screenshot
-    await page.screenshot({ path: 'test-results/cart-multiple-items.png', fullPage: true });
-  });
+});
 
   /**
    * Test Case 3: Remove Item from Cart
@@ -187,9 +183,7 @@ test.describe('Shopping Cart Functionality', () => {
     const isBadgeVisible = await cartPage.isCartBadgeVisible();
     expect(isBadgeVisible).toBe(false);
 
-    // Take screenshot empty cart
-    await page.screenshot({ path: 'test-results/cart-after-remove.png', fullPage: true });
-  });
+});
 
   /**
    * Test Case 4: Cart Badge Shows Correct Count
@@ -227,9 +221,7 @@ test.describe('Shopping Cart Functionality', () => {
     badgeCount = await productsPage.getCartItemCount();
     expect(badgeCount).toBe(2);
 
-    // Take screenshot
-    await page.screenshot({ path: 'test-results/cart-badge-count.png', fullPage: true });
-  });
+});
 
   /**
    * Test Case 5: Continue Shopping Button
@@ -315,9 +307,7 @@ test.describe('Shopping Cart Functionality', () => {
     expect(cartItems).not.toContain(PRODUCTS.BACKPACK);
     expect(cartItems).not.toContain(PRODUCTS.BIKE_LIGHT);
 
-    // Take screenshot
-    await page.screenshot({ path: 'test-results/cart-after-multiple-remove.png', fullPage: true });
-  });
+});
 
   /**
    * Test Case 7: Verify Item Details in Cart
@@ -356,9 +346,7 @@ test.describe('Shopping Cart Functionality', () => {
     expect(itemDesc).toBeTruthy();
     expect(itemDesc.length).toBeGreaterThan(0);
 
-    // Take screenshot
-    await page.screenshot({ path: 'test-results/cart-item-details.png', fullPage: true });
-  });
+});
 
   /**
    * Test Case 8: Add and Remove Same Product
@@ -429,9 +417,7 @@ test.describe('Shopping Cart Functionality', () => {
     // 5. Verify checkout button still visible (enabled even when empty in SauceDemo)
     await expect(cartPage.checkoutButton).toBeVisible();
 
-    // Take screenshot empty cart
-    await page.screenshot({ path: 'test-results/cart-empty-state.png', fullPage: true });
-  });
+});
 
   /**
    * Test Case 10: Add All Products to Cart
@@ -479,7 +465,5 @@ test.describe('Shopping Cart Functionality', () => {
     // Total: 29.99 + 9.99 + 15.99 + 49.99 + 7.99 + 15.99 = 129.94
     expect(totalPrice).toBeCloseTo(129.94, 2);
 
-    // Take screenshot with all items
-    await page.screenshot({ path: 'test-results/cart-all-items.png', fullPage: true });
-  });
+});
 });

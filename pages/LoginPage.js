@@ -171,16 +171,4 @@ export class LoginPage {
       await this.errorCloseButton.click();
     }
   }
-
-  /**
-   * Take screenshot dengan nama yang deskriptif
-   *
-   * @param {string} screenshotName - Nama file screenshot
-   */
-  async takeScreenshot(screenshotName) {
-    await this.page.screenshot({
-      path: `screenshots/${screenshotName}.png`,
-      fullPage: true
-    });
-  }
 }

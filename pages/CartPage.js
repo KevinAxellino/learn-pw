@@ -369,18 +369,6 @@ export class CartPage {
   // ==================== UTILITY METHODS ====================
 
   /**
-   * Take screenshot dengan nama yang deskriptif
-   *
-   * @param {string} screenshotName - Nama file screenshot
-   */
-  async takeScreenshot(screenshotName) {
-    await this.page.screenshot({
-      path: `screenshots/${screenshotName}.png`,
-      fullPage: true
-    });
-  }
-
-  /**
    * Wait for cart to update
    * Berguna setelah add/remove item
    */

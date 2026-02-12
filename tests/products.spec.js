@@ -66,9 +66,7 @@ test.describe('Products Page Functionality', () => {
     // 5. Verify cart icon visible
     await expect(productsPage.cartIcon).toBeVisible();
 
-    // Take screenshot
-    await page.screenshot({ path: 'test-results/products-page-loaded.png', fullPage: true });
-  });
+});
 
   /**
    * Test Case 2: Sort Products by Name (A to Z)
@@ -105,9 +103,7 @@ test.describe('Products Page Functionality', () => {
 
     expect(productNames).toEqual(expectedOrder);
 
-    // Take screenshot
-    await page.screenshot({ path: 'test-results/products-sort-name-asc.png', fullPage: true });
-  });
+});
 
   /**
    * Test Case 3: Sort Products by Name (Z to A)
@@ -142,9 +138,7 @@ test.describe('Products Page Functionality', () => {
 
     expect(productNames).toEqual(expectedOrder);
 
-    // Take screenshot
-    await page.screenshot({ path: 'test-results/products-sort-name-desc.png', fullPage: true });
-  });
+});
 
   /**
    * Test Case 4: Sort Products by Price (Low to High)
@@ -176,9 +170,7 @@ test.describe('Products Page Functionality', () => {
     expect(productPrices[0]).toBe(7.99);   // Onesie (termurah)
     expect(productPrices[5]).toBe(49.99);  // Fleece Jacket (termahal)
 
-    // Take screenshot
-    await page.screenshot({ path: 'test-results/products-sort-price-asc.png', fullPage: true });
-  });
+});
 
   /**
    * Test Case 5: Sort Products by Price (High to Low)
@@ -210,9 +202,7 @@ test.describe('Products Page Functionality', () => {
     expect(productPrices[0]).toBe(49.99);  // Fleece Jacket (termahal)
     expect(productPrices[5]).toBe(7.99);   // Onesie (termurah)
 
-    // Take screenshot
-    await page.screenshot({ path: 'test-results/products-sort-price-desc.png', fullPage: true });
-  });
+});
 
   /**
    * Test Case 6: Click Product Name to View Details
@@ -253,9 +243,7 @@ test.describe('Products Page Functionality', () => {
     const productPrice = page.locator('.inventory_details_price');
     await expect(productPrice).toBeVisible();
 
-    // Take screenshot of product detail page
-    await page.screenshot({ path: 'test-results/product-detail-page.png', fullPage: true });
-  });
+});
 
   /**
    * Test Case 7: Verify All Products Have Images
@@ -277,9 +265,7 @@ test.describe('Products Page Functionality', () => {
       await expect(productImage).toBeVisible();
     }
 
-    // Take screenshot
-    await page.screenshot({ path: 'test-results/products-with-images.png', fullPage: true });
-  });
+});
 
   /**
    * Test Case 8: Verify All Products Have Prices

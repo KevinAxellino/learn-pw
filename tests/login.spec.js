@@ -67,9 +67,7 @@ test.describe('Login Functionality', () => {
     await expect(pageTitle).toBeVisible();
     await expect(pageTitle).toHaveText('Products');
 
-    // Take screenshot untuk dokumentasi
-    await page.screenshot({ path: 'test-results/login-success.png', fullPage: true });
-  });
+});
 
   /**
    * Test Case 2: Login Gagal dengan Invalid Username
@@ -106,9 +104,7 @@ test.describe('Login Functionality', () => {
     const isOnLoginPage = await loginPage.isOnLoginPage();
     expect(isOnLoginPage).toBe(true);
 
-    // Take screenshot error message
-    await page.screenshot({ path: 'test-results/login-invalid-username.png', fullPage: true });
-  });
+});
 
   /**
    * Test Case 3: Login Gagal dengan Invalid Password
@@ -143,8 +139,6 @@ test.describe('Login Functionality', () => {
     const isSuccess = await loginPage.isLoginSuccessful();
     expect(isSuccess).toBe(false);
 
-    // Take screenshot
-    await page.screenshot({ path: 'test-results/login-invalid-password.png', fullPage: true });
   });
 
   /**
@@ -181,9 +175,7 @@ test.describe('Login Functionality', () => {
     // 3. Verify user masih di login page
     expect(page.url()).not.toContain('inventory.html');
 
-    // Take screenshot locked user error
-    await page.screenshot({ path: 'test-results/login-locked-user.png', fullPage: true });
-  });
+});
 
   /**
    * Test Case 5: Login Gagal dengan Empty Username
@@ -208,9 +200,7 @@ test.describe('Login Functionality', () => {
     const errorMessage = await loginPage.getErrorMessage();
     expect(errorMessage).toContain(ERROR_MESSAGES.MISSING_USERNAME);
 
-    // Take screenshot
-    await page.screenshot({ path: 'test-results/login-empty-username.png', fullPage: true });
-  });
+});
 
   /**
    * Test Case 6: Login Gagal dengan Empty Password
@@ -235,9 +225,7 @@ test.describe('Login Functionality', () => {
     const errorMessage = await loginPage.getErrorMessage();
     expect(errorMessage).toContain(ERROR_MESSAGES.MISSING_PASSWORD);
 
-    // Take screenshot
-    await page.screenshot({ path: 'test-results/login-empty-password.png', fullPage: true });
-  });
+});
 
   /**
    * Test Case 7: Verify Login Button is Enabled
@@ -272,7 +260,5 @@ test.describe('Login Functionality', () => {
     await expect(loginPage.usernameInput).toHaveAttribute('placeholder', 'Username');
     await expect(loginPage.passwordInput).toHaveAttribute('placeholder', 'Password');
 
-    // Take screenshot halaman login
-    await page.screenshot({ path: 'test-results/login-page-elements.png', fullPage: true });
-  });
+});
 });

@@ -391,16 +391,4 @@ export class ProductsPage {
     // Remove '$' dan convert ke number
     return parseFloat(priceText.replace('$', ''));
   }
-
-  /**
-   * Take screenshot dengan nama yang deskriptif
-   *
-   * @param {string} screenshotName - Nama file screenshot
-   */
-  async takeScreenshot(screenshotName) {
-    await this.page.screenshot({
-      path: `screenshots/${screenshotName}.png`,
-      fullPage: true
-    });
-  }
 }

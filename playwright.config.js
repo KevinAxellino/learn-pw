@@ -101,13 +101,11 @@ export default defineConfig({
 
     /**
      * screenshot: Kapan take screenshot
-     * - 'on': Screenshot untuk semua tests (educational purposes)
+     * - 'on': Screenshot untuk semua tests
      * - 'only-on-failure': Screenshot hanya ketika test gagal
      * - 'off': Tidak take screenshot
-     *
-     * Screenshots tersimpan di test-results/ folder
      */
-    screenshot: 'on',
+    screenshot: 'off',
 
     /**
      * video: Kapan record video
