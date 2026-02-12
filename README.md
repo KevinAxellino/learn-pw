@@ -6,7 +6,7 @@ Project Playwright educational untuk belajar automation testing dari dasar sampa
 
 ---
 
-## 📋 Daftar Isi
+## Daftar Isi
 
 - [Tentang Project](#tentang-project)
 - [Fitur-Fitur](#fitur-fitur)
@@ -24,7 +24,7 @@ Project Playwright educational untuk belajar automation testing dari dasar sampa
 
 ---
 
-## 🎯 Tentang Project
+## Tentang Project
 
 Project ini adalah **comprehensive guide** untuk belajar Playwright automation testing dengan:
 
@@ -39,7 +39,7 @@ Website yang digunakan: **[SauceDemo](https://www.saucedemo.com/)** - Demo e-com
 
 ---
 
-## ✨ Fitur-Fitur
+## Fitur-Fitur
 
 ### 🧪 Test Coverage
 - **Login Tests**: Valid/invalid credentials, locked user, empty fields
@@ -64,7 +64,7 @@ Website yang digunakan: **[SauceDemo](https://www.saucedemo.com/)** - Demo e-com
 
 ---
 
-## 📦 Prerequisites
+## Prerequisites
 
 Sebelum memulai, pastikan sudah install:
 
@@ -80,7 +80,7 @@ Sebelum memulai, pastikan sudah install:
 
 ---
 
-## 🚀 Installation
+## Installation
 
 ### Step 1: Clone Repository
 
@@ -115,7 +115,7 @@ Ini akan install:
 
 ---
 
-## 🏃 Cara Menjalankan Tests
+## Cara Menjalankan Tests
 
 ### Run All Tests (Semua Browsers)
 
@@ -209,7 +209,7 @@ npx playwright show-report
 
 ---
 
-## 📁 Struktur Project
+## Struktur Project
 
 ```
 testProject/
@@ -240,7 +240,6 @@ testProject/
 │
 ├── playwright.config.js            # ⚙️ Playwright Configuration
 ├── package.json                    # 📦 NPM Dependencies
-├── CLAUDE.md                       # 🤖 Claude Code Instructions
 └── README.md                       # 📖 This file
 ```
 
@@ -274,7 +273,7 @@ Berisi helper functions dan test data:
 
 ---
 
-## 🎬 Test Scenarios
+## Test Scenarios
 
 ### Login Tests (8 tests)
 1. ✅ Login sukses dengan valid credentials
@@ -314,7 +313,7 @@ Berisi helper functions dan test data:
 
 ---
 
-## 🏗️ Page Object Model
+## Page Object Model
 
 ### Apa itu Page Object Model (POM)?
 
@@ -402,7 +401,7 @@ test('should login successfully', async ({ page }) => {
 
 ---
 
-## 📊 Reports dan Screenshots
+## Reports dan Screenshots
 
 ### HTML Report
 
@@ -451,7 +450,7 @@ video: 'retain-on-failure'  // Save video hanya ketika fail
 
 ---
 
-## 📚 Dokumentasi Tambahan
+## Dokumentasi Tambahan
 
 ### 📄 CHEATSHEET.md
 Quick reference untuk Playwright commands yang sering dipakai:
@@ -479,7 +478,7 @@ Step-by-step tutorial untuk belajar Playwright dari nol:
 
 ---
 
-## 💡 Tips dan Best Practices
+## Tips dan Best Practices
 
 ### 1. **Selalu Gunakan Page Object Model**
 - Jangan hardcode locators di test files
@@ -540,7 +539,7 @@ npx playwright test --ui
 
 ---
 
-## 🔧 Troubleshooting
+## Troubleshooting
 
 ### Issue: Browser tidak ter-install
 
@@ -604,7 +603,7 @@ npm install
 
 ---
 
-## 📖 Resources
+## Resources
 
 ### Playwright Documentation
 - **Official Docs**: https://playwright.dev/
